@@ -90,14 +90,16 @@ a:visited {
 .cell{
 	display: table-cell;
 	vertical-align: top;
-	padding:10px;
 }
 
 .row{
 	display: table-row;
 }
 
-.sidebar{
+.portrait{
+	float:left;
+	padding-right:10px;
+	padding-bottom:10px;
 }
 
 
