@@ -1,0 +1,116 @@
+body {
+	background-color: #3e4244;
+	font-family: Ubuntu,Arial,sans-serif;
+	margin: 0px;
+	color: white;
+}
+
+a:link {
+    color: #b0b0f5;
+}
+
+a:visited {
+    color: #b0b0f5;
+}
+
+.centered {
+	max-width: 740px;
+	margin-left: auto;
+	margin-right: auto;	
+	padding: 20px;
+}
+
+.navigation {	
+	background-color: #666666;
+	color: white;
+	font-size: 1em;	
+	padding: 10px;
+	max-width:760px;
+}
+
+.banner {	
+	background-color: #222222;
+	color: white;
+	font-size: 3em;
+	letter-spacing: 0.05em;
+}
+
+.content {
+	background-color: #666666;
+	min-height:calc(100vh - 267px);
+	font-size: 1em;
+}
+
+.footer {	
+	background-color: #222222;
+	color: white;
+	font-size: 1em;
+}
+
+.dropbutton {
+  background-color: #4c4c4c;
+  color: white;
+  padding: 16px;
+  font-size: 1em;
+  border: none;
+  margin: 2px;
+}
+ 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+	display: inline-block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbutton {background-color: #383737;}
+
+.table{
+	display: table;
+	width: 100%;
+}
+
+.cell{
+	display: table-cell;
+	vertical-align: top;
+	padding:10px;
+}
+
+.row{
+	display: table-row;
+}
+
+.sidebar{
+}
+
+
+@media screen and (max-width:760px) {
+	.divider {
+		display: none;
+	}
+	.container{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.col{
+		width: 100%;
+		float: left;
+	}
+}
