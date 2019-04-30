@@ -33,6 +33,7 @@ a:visited {
 	color: white;
 	font-size: 3em;
 	letter-spacing: 0.05em;
+	min-height: 55px
 }
 
 .content {
@@ -83,8 +84,6 @@ a:visited {
 .dropdown:hover .dropbutton {background-color: #383737;}
 
 .table{
-	display: table;
-	width: 100%;
 }
 
 .cell{
@@ -99,23 +98,13 @@ a:visited {
 .portrait{
 	float:left;
 	margin-right:10px;
-	margin-bottom:10px;
+	margin-bottom:5px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #3e4244;
 }
 
 
-@media screen and (max-width:760px) {
-	.divider {
-		display: none;
-	}
-	.container{
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-	.col{
-		width: 100%;
-		float: left;
-	}
+@media screen and (max-width:480px) {
+	.banner {
 }
