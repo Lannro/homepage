@@ -24,8 +24,8 @@ a:visited {
 	background-color: #666666;
 	color: white;
 	font-size: 1em;	
-	padding: 10px;
-	max-width:760px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .banner {	
@@ -105,6 +105,8 @@ a:visited {
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:425px) {
 	.banner {
+		font-size: 2em;
+	}
 }
