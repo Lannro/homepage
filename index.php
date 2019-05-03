@@ -6,3 +6,6 @@
 		<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php';?>
 	</body>
 </html>
+
+
+BIG TEST
