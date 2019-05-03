@@ -5,9 +5,6 @@ echo "
 	<div class='row'>
 		<div class='content cell'>
 			<img class='portrait' src='/files/portrait.jpg' width=200 height=260>
-			Click here for <a href='./test'>test.</a>
-			<br>
-			<br>
 			Tyler Cinkant is a professional Programmer, Game Developer, and Systems Analyst.
 			<br>
 			<br>

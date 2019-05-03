@@ -5,12 +5,11 @@ body {
 	color: white;
 }
 
-a:link {
-    color: #b0b0f5;
-}
 
-a:visited {
+
+a {
     color: #b0b0f5;
+	text-decoration: none;
 }
 
 .centered {
@@ -83,19 +82,20 @@ a:visited {
 
 .dropdown:hover .dropbutton {background-color: #383737;}
 
-.table{
+.table {
+	display: table;
 }
 
-.cell{
+.cell {
 	display: table-cell;
 	vertical-align: top;
 }
 
-.row{
+.row {
 	display: table-row;
 }
 
-.portrait{
+.portrait {
 	float:left;
 	margin-right:10px;
 	margin-bottom:5px;
@@ -104,9 +104,62 @@ a:visited {
 	border-color: #3e4244;
 }
 
+.project {
+	display: table;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-height: 60px;
+}
 
-@media screen and (max-width:425px) {
+.projecttitle {	
+	font-size: 1.2em;
+}
+
+.projectdescription {	
+	font-size: .8em;
+}
+
+.projecticon {	
+	margin-right: 15px;
+	margin-bottom:5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3e4244;
+}
+
+.project-center {
+	display: table-cell;
+    vertical-align: middle;	
+}
+
+.projectbanner {
+	margin-left: auto;
+    margin-right: auto;
+	padding-bottom: 10px;
+	max-width:100%;
+}
+
+.screenshot {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3e4244;
+    margin: 10px;
+	width: 46.6666%;
+}
+
+.trailer {
+	max-width: 100%;	
+}
+
+
+@media screen and (max-width:445px) {
 	.banner {
 		font-size: 2em;
+	}
+}
+
+@media screen and (max-width:760px) {
+	.screenshot {
+		width: 96.66666%;
 	}
 }

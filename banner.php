@@ -13,18 +13,21 @@ foreach($path as $i => $arr){
 //<div class='navigation centered'>" . join(" > ", $path) . "</div>
 echo "
 <div class='banner centered'>TYLER CINKANT</div>
-<div class='navigation centered table'>
+<div class='navigation centered'>
 	<div class='row'>
 		<div class='dropdown'>
 			<button class='dropbutton' onclick=\"location.href = '/';\">Home</button>
 		</div>
 		<div class='dropdown'>
-			<button class='dropbutton' onclick=\"location.href = '/projects';\">Projects</button>
+			<button class='dropbutton' onclick=\"location.href = '/systems';\">Systems Analyst</button>
+		</div>
+		<div class='dropdown'>
+			<button class='dropbutton' onclick=\"location.href = '/projects';\">Game Development</button>
 			<div class='dropdown-content'>
 				<a href='/projects/fantasybump'>Fantasy Bump</a>
 				<a href='/projects/sinecannon'>Sine Cannon</a>
 				<a href='/projects/grandclassmelee2'>Grand Class Melee 2</a>
-				<a href='/projects/grandclassmelee2'>Grand Class Melee</a>
+				<a href='/projects/grandclassmelee'>Grand Class Melee</a>
 			</div>
 		</div>
 	</div>
