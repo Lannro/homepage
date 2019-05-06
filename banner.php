@@ -19,10 +19,10 @@ echo "
 			<button class='dropbutton' onclick=\"location.href = '/';\">Home</button>
 		</div>
 		<div class='dropdown'>
-			<button class='dropbutton' onclick=\"location.href = '/systems';\">Systems Analyst</button>
+			<button class='dropbutton' onclick=\"location.href = '/systems';\">Systems</button>
 		</div>
 		<div class='dropdown'>
-			<button class='dropbutton' onclick=\"location.href = '/projects';\">Game Development</button>
+			<button class='dropbutton' onclick=\"location.href = '/projects';\">Projects</button>
 			<div class='dropdown-content'>
 				<a href='/projects/fantasybump'>Fantasy Bump</a>
 				<a href='/projects/sinecannon'>Sine Cannon</a>

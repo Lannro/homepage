@@ -3,6 +3,6 @@
 	<head>
 		<link rel="stylesheet" href="/files/styles.css">
 		<link rel="icon" href="/files/favicon.png" sizes="16x16" type="image/png">
-		<title>Tyler Cinkant - programmer // developer // systems analyst</title>
+		<title>Tyler Cinkant</title>
 	</head>';
 ?>
