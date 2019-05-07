@@ -10,7 +10,10 @@ foreach($path as $i => $arr){
 	$path[$i] = "<a href='../'>".$arr."</a>";
 	}
 }
-//<div class='navigation centered'>" . join(" > ", $path) . "</div>
+
+
+echo "</div>";
+
 echo "
 <div class='banner centered'>TYLER CINKANT</div>
 <div class='navigation centered'>
@@ -23,13 +26,39 @@ echo "
 		</div>
 		<div class='dropdown'>
 			<button class='dropbutton' onclick=\"location.href = '/projects';\">Projects</button>
-			<div class='dropdown-content'>
-				<a href='/projects/fantasybump'>Fantasy Bump</a>
-				<a href='/projects/sinecannon'>Sine Cannon</a>
-				<a href='/projects/grandclassmelee2'>Grand Class Melee 2</a>
-				<a href='/projects/grandclassmelee'>Grand Class Melee</a>
-			</div>
+			<div class='dropdown-content'>";			
+if($con = try_connect())
+{
+	display_project_banner_list($con);	
+	mysqli_close($con);	
+}
+echo"		</div>
+			
 		</div>
 	</div>
-</div>
-";?>
+</div>";
+
+
+function try_connect()
+{
+	$dbhost = $_SERVER['SERVER_NAME'];
+	$db = 'tcinkant_db';
+	if($con = @mysqli_connect($dbhost))
+	{		
+		mysqli_select_db($con, $db);
+		return $con;
+	}
+	else
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	return null;
+}
+
+function display_project_banner_list($con) {
+	$sql = "select short_name, long_name from projects order by date desc";
+	$results = mysqli_query($con, $sql);
+	while($row = $results->fetch_array())
+		echo "<a href='/projects?name=".$row['short_name']."'>".$row['long_name']."</a>";
+}
+
+
+;?>
