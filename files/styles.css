@@ -5,8 +5,6 @@ body {
 	color: white;
 }
 
-
-
 a {
     color: #b0b0f5;
 	text-decoration: none;
@@ -37,7 +35,7 @@ a {
 
 .content {
 	background-color: #666666;
-	min-height:calc(100vh - 267px);
+	min-height:calc(100vh - 289px);
 	font-size: 1em;
 }
 
@@ -45,6 +43,8 @@ a {
 	background-color: #222222;
 	color: white;
 	font-size: 1em;
+	padding: 10px;
+	max-width: 760px;
 }
 
 .dropbutton {
@@ -88,7 +88,8 @@ a {
 
 .cell {
 	display: table-cell;
-	vertical-align: top;
+	vertical-align: middle;
+	padding: 5px;
 }
 
 .row {
@@ -149,6 +150,10 @@ a {
 
 .trailer {
 	max-width: 100%;	
+}
+
+.copyright {
+	width: 85%;
 }
 
 

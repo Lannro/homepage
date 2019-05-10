@@ -3,8 +3,8 @@ $path = preg_split("@/@", $_SERVER['REQUEST_URI'], NULL, PREG_SPLIT_NO_EMPTY);
 echo "
 <div class='content centered table'>
 	<div class='row'>
-		<div class='content cell'>
-			<img class='portrait' src='/files/portrait.jpg' width=150 height=150>
+		<div class='content'>
+			<img class='portrait' src='/files/portrait.jpg' width=160 height=160>
 			Tyler Cinkant is a professional Programmer, Game Developer, and Systems Analyst.
 			<br>
 			<br>
