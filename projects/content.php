@@ -28,7 +28,6 @@ function display_project($con, $row){
 	$short_name = $row['short_name'];
 	$long_name =  $row['long_name'];
 	$short_description =  $row['short_description'];
-	$long_description =  $row['long_description'];
 	$tiny_name =  $row['tiny_name'];
 	$overview =  $row['overview'];
 	$features =  $row['features'];
