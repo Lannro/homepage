@@ -42,6 +42,7 @@ function display_project($con, $row){
 	display_features($features);
 	display_design($design);
 	display_trailer($trailer);
+	display_screenshots($tiny_name);
 }
 
 
@@ -67,7 +68,21 @@ function display_design($design) {
 
 function display_trailer($trailer) {
 	if($trailer) echo '<div class="row"><h2>Trailer</h2>
-	<iframe class="trailer" width="425" height="240" src="https://www.youtube.com/embed/'.$trailer.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+	<iframe class="trailer" width="425" height="240" src="https://www.youtube.com/embed/'.$trailer.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br></div>';
+}
+
+function display_screenshots($tiny_name) {
+	if(!glob($_SERVER['DOCUMENT_ROOT'] . "/files/".$tiny_name."_ss*"))
+		return;
+	echo'<div class="row">	
+		<h2>Screenshots</h2>	
+		<div class="row">';
+	foreach (glob($_SERVER['DOCUMENT_ROOT'] . "/files/".$tiny_name."_ss*") as $filename) {
+		$filename = str_replace($_SERVER['DOCUMENT_ROOT'], '', $filename);
+		echo '<img class="screenshot" src="'.$filename.'"></img>';
+	}
+	echo'</div>	
+	</div>';
 }
 
 function display_project_list($con) {
