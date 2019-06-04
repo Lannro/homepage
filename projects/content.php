@@ -29,22 +29,25 @@ function display_project($con, $row){
 	$long_name =  $row['long_name'];
 	$short_description =  $row['short_description'];
 	$tiny_name =  $row['tiny_name'];
-	$overview =  $row['overview'];
 	$features =  $row['features'];
 	$design =  $row['design'];
 	$trailer =  $row['trailer'];
 	$banner_x =  $row['banner_x'];
 	$banner_y =  $row['banner_y'];
 	$download =  $row['download'];
+	$embed =  $row['embed'];
 	
 	display_banner($banner_x, $banner_y, $tiny_name);
 	display_name($long_name);
-	display_overview($overview);
-	display_features($features);
-	display_design($design);
+	
+	display_content("Overview", $row['overview']);
+	display_content("Features", $row['features']);
+	display_content("Design", $row['design']);
+	
 	display_trailer($trailer);
 	display_screenshots($tiny_name);
 	display_download($download);
+	display_embed($embed);
 }
 
 
@@ -53,24 +56,29 @@ function display_banner($banner_x, $banner_y, $tiny_name) {
 }
 
 function display_name($long_name) {
-	echo '<div class="row"><h1>' . $long_name . '</h1></div>';
+	echo '
+	<div class="row">
+		<div class="headertext">
+			<h1>' . $long_name . '</h1>
+		</div>
+	</div>';
 }
 
-function display_overview($overview) {
-	if($overview) echo '<div class="row"><h2>Overview</h2>'.$overview.'</div>';
-}
-
-function display_features($features) {
-	if($features) echo '<div class="row"><h2>Features</h2>'.$features.'</div>';
-}
-
-function display_design($design) {
-	if($design) echo '<div class="row"><h2>Design</h2>'.$design.'</div>';
+function display_content($headername, $content) {
+	if($content) echo '
+	<div class="row">
+		<div class="headertext">
+			<h2>'.$headername.'</h2>
+		</div>
+		<div class="contenttext">
+			'.$content.'
+		</div>
+	</div>';
 }
 
 function display_trailer($trailer) {
-	if($trailer) echo '<div class="row"><h2>Trailer</h2>
-	<iframe class="trailer" width="425" height="240" src="https://www.youtube.com/embed/'.$trailer.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br></div>';
+	if($trailer)
+		display_content("Trailer", '<iframe class="trailer" width="425"height="240" src="https://www.youtube.com/embed/'.$trailer.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 }
 
 function display_screenshots($tiny_name) {
@@ -88,8 +96,13 @@ function display_screenshots($tiny_name) {
 }
 
 function display_download($download) {
-	if($download>0) echo '<div class="row"><h2>Download</h2>
-	<iframe frameborder="0" src="https://itch.io/embed/'.$download.'?border_width=2&amp;bg_color=3e4244&amp;fg_color=ffffff&amp;link_color=b0b0f5&amp;border_color=222222" width="554" height="169"></iframe><br><br></div>';
+	if($download>0)
+		display_content("Download", '<iframe class="download" frameborder="0" src="https://itch.io/embed/'.$download.'?border_width=2&amp;bg_color=3e4244&amp;fg_color=ffffff&amp;link_color=b0b0f5&amp;border_color=222222" width="554" height="169"></iframe>');
+}
+
+function display_embed($embed) {
+	if($embed>0)
+		display_content("Play", '<a href="https://itch.io/embed-upload/'.$embed.'?color=3e4244">Click here</a> to play the game in your browser.');
 }
 
 function display_project_list($con) {

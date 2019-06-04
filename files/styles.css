@@ -138,6 +138,7 @@ a {
     margin-right: auto;
 	padding-bottom: 10px;
 	max-width:100%;
+	height: auto;
 }
 
 .screenshot {
@@ -156,6 +157,14 @@ a {
 	width: 85%;
 }
 
+iframe.download {
+	max-width: 100%;
+}
+
+.contenttext {
+	margin-bottom: 20px;
+	padding: 0px 20px;
+}
 
 @media screen and (max-width:445px) {
 	.banner {
