@@ -10,34 +10,34 @@ foreach($path as $i => $arr){
 	$path[$i] = "<a href='../'>".$arr."</a>";
 	}
 }
+?>
+</div>
 
-
-echo "</div>";
-
-echo "
 <div class='banner centered'>TYLER CINKANT</div>
 <div class='navigation centered'>
 	<div class='row'>
 		<div class='dropdown'>
-			<button class='dropbutton' onclick=\"location.href = '/';\">Home</button>
+			<button class='dropbutton' onclick='location.href="/"'>Home</button>
 		</div>
 		<div class='dropdown'>
-			<button class='dropbutton' onclick=\"location.href = '/systems';\">Systems</button>
+			<button class='dropbutton' onclick='location.href="/systems"'>Systems</button>
 		</div>
 		<div class='dropdown'>
-			<button class='dropbutton' onclick=\"location.href = '/projects';\">Projects</button>
-			<div class='dropdown-content'>";			
+			<button class='dropbutton' onclick='location.href="/projects"'>Projects</button>
+			<div class='dropdown-content'>
+<?php
 if($con = try_connect())
 {
 	display_project_banner_list($con);	
 	mysqli_close($con);	
 }
-echo"		</div>
-			
+?>
+			</div>			
 		</div>
 	</div>
-</div>";
+</div>
 
+<?php
 
 function try_connect()
 {
@@ -59,6 +59,4 @@ function display_project_banner_list($con) {
 	while($row = $results->fetch_array())
 		echo "<a href='/projects?name=".$row['short_name']."'>".$row['long_name']."</a>";
 }
-
-
-;?>
+?>

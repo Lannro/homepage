@@ -1,28 +1,28 @@
-<?php echo "
 <div class='content centered'>
-";
-
-if($con = try_connect())
-{
-	if(isset($_GET["name"]))
-	{	
-		$short_name = trim($_GET["name"]);
-		$sql = "select * from projects where short_name = '" . $short_name ."'";
-		$results = mysqli_query($con, $sql);
-		$row = $results->fetch_array();
+	<?php
+	if($con = try_connect())
+	{
+		if(isset($_GET["name"]))
+		{	
+			$short_name = trim($_GET["name"]);
+			$sql = "select * from projects where short_name = '" . $short_name ."'";
+			$results = mysqli_query($con, $sql);
+			$row = $results->fetch_array();
+		}
+		else
+			$row = null;
+		
+		if ($row)
+			display_project($con, $row);
+		else
+			display_project_list($con);
+		
+		mysqli_close($con);	
 	}
-	else
-		$row = null;
-	
-	if ($row)
-		display_project($con, $row);
-	else
-		display_project_list($con);
-	
-	mysqli_close($con);	
-}
+	?>
+</div>
 
-echo "</div>";
+<?php
 
 function display_project($con, $row){
 	$short_name = $row['short_name'];
@@ -125,5 +125,4 @@ function display_project_list($con) {
 		</div>";
 	}
 }
-
-;?>
+?>

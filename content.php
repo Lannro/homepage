@@ -1,6 +1,3 @@
-<?php
-$path = preg_split("@/@", $_SERVER['REQUEST_URI'], NULL, PREG_SPLIT_NO_EMPTY);
-echo "
 <div class='content centered table'>
 	<div class='row'>
 		<div class='content'>
@@ -18,4 +15,3 @@ echo "
 		</div>
 	</div>
 </div>
-"?>

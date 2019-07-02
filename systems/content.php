@@ -1,4 +1,3 @@
-<?php echo "
 <div class='content centered'>
 	<div class='row'>
 		Starting in 2016, Tyler began working at the University of British Columbia, for UBC IT - Learning Applications. He was first hired as a Support Analyst for the Learning Technology Evnironment Renewal project. The project's focus was to implement a transition between UBC's previous Learning Management System (Blackboard) to a new LMS (Canvas).<br>
@@ -19,4 +18,3 @@
 		So far for Tyler, working at the University of British Columbia has been a wonderful experience, full of potential and positivity. He is always hoping to expand his experience with whatever opportunities present themselves.
 	</div>
 </div>
-"?>
