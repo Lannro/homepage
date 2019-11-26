@@ -41,7 +41,7 @@ if($con = try_connect())
 
 function try_connect()
 {
-	$dbhost = $_SERVER['SERVER_NAME'];
+	$dbhost = 'localhost';
 	$db = 'tcinkant_db';
 	if($con = @mysqli_connect($dbhost))
 	{		
