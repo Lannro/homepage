@@ -11,8 +11,6 @@ foreach($path as $i => $arr){
 	}
 }
 ?>
-</div>
-
 <div class='banner centered'>TYLER CINKANT</div>
 <div class='navigation centered'>
 	<div class='row'>

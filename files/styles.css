@@ -10,8 +10,15 @@ a {
 	text-decoration: none;
 }
 
+.wrapper { 
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 .centered {
-	max-width: 740px;
+	width: 740px;
+	max-width: calc(100% - 40px);
 	margin-left: auto;
 	margin-right: auto;	
 	padding: 20px;
@@ -35,8 +42,8 @@ a {
 
 .content {
 	background-color: #666666;
-	min-height:calc(100vh - 294px);
 	font-size: 1em;
+	flex: 1;
 }
 
 .footer {	
@@ -44,7 +51,8 @@ a {
 	color: white;
 	font-size: 1em;
 	padding: 10px;
-	max-width: 760px;
+	width: 760px;
+	max-width: calc(100% - 20px);
 }
 
 .dropbutton {

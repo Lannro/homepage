@@ -1,6 +1,6 @@
 <div class="footer centered">
 	<div class="cell copyright">
-		© 2019 Tyler Cinkant
+		© 2020 Tyler Cinkant
 	</div>
 	<div class="cell">
 		<a href="https://www.github.com/lannro" target="_blank">
